@@ -1,14 +1,14 @@
 <?php
 
-use Sundance\LarachainPromptTemplates\FewShotPromptTemplate;
 use function PHPUnit\Framework\assertEquals;
+use Sundance\LarachainPromptTemplates\FewShotPromptTemplate;
 use Sundance\LarachainPromptTemplates\Prompts\PromptToken;
 use Sundance\LarachainPromptTemplates\PromptTemplate;
 
 it('test few show', function () {
-    $prefix = "Give the antonym of every input";
+    $prefix = 'Give the antonym of every input';
 
-    $template = <<<EOD
+    $template = <<<'EOD'
 Word: {word}
 Antonym: {antonym}
 EOD;
@@ -45,7 +45,6 @@ EOD;
         $template
     );
 
-
     $input_variables = [
         new PromptToken(
             'word',
@@ -57,9 +56,7 @@ EOD;
         ),
     ];
 
-
-
-    $template = <<<EOD
+    $template = <<<'EOD'
 Word: {word}
 Antonym:
 EOD;
@@ -72,7 +69,7 @@ EOD;
         $suffix
     );
 
-    $expected = <<<EOD
+    $expected = <<<'EOD'
 Give the antonym of every input
 Word: happy
 Antonym: sad
@@ -82,6 +79,5 @@ Word: big
 Antonym:
 EOD;
 
-    assertEquals($expected, $dto->format("big"));
+    assertEquals($expected, $dto->format('big'));
 });
-

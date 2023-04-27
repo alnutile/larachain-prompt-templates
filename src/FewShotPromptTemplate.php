@@ -4,24 +4,23 @@ namespace Sundance\LarachainPromptTemplates;
 
 class FewShotPromptTemplate extends \Spatie\LaravelData\Data
 {
-
     /**
-     * @param PromptTemplate[] $promptTemplates
+     * @param  PromptTemplate[]  $promptTemplates
      */
     public function __construct(
         public array $promptTemplates,
         public ?string $prefix,
         public PromptTemplate $suffix,
-    )
-    {
+    ) {
 
     }
 
-    public function format(string $input) {
+    public function format(string $input)
+    {
         $results = [];
         $results[] = $this->prefix;
 
-        foreach($this->promptTemplates as $index => $promptTemplate) {
+        foreach ($this->promptTemplates as $index => $promptTemplate) {
             $results[] = $promptTemplate->format();
         }
 
