@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Sundance\LarachainPromptTemplates;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use Sundance\LarachainPromptTemplates\Commands\LarachainPromptTemplatesCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class LarachainPromptTemplatesServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('larachain-prompt-templates')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_larachain-prompt-templates_table')
+            ->hasCommand(LarachainPromptTemplatesCommand::class);
     }
 }
