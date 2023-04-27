@@ -43,7 +43,7 @@ EOD;
         new PromptToken(
             'product3',
             'colorful headbands'
-        )
+        ),
     ];
     $dto = new PromptTemplate(
         $input_variables,
