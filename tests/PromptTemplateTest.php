@@ -53,3 +53,21 @@ EOD;
     assertEquals('I want you to act as a naming consultant for new companies.
 What is a good name for a company that makes colorful socks, colorful hats and colorful headbands?', $dto->format());
 });
+
+
+it('test no prompt', function () {
+    $template = <<<'EOD'
+I want you to act as a naming consultant for new companies.
+What is a good name for a company that makes does nothing?
+EOD;
+
+    $input_variables = [];
+
+    $dto = new PromptTemplate(
+        $input_variables,
+        $template
+    );
+
+    assertEquals('I want you to act as a naming consultant for new companies.
+What is a good name for a company that makes does nothing?', $dto->format());
+});
