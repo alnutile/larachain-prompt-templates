@@ -16,6 +16,7 @@ EOD;
             'colorful socks'
         ),
     ];
+
     $dto = new PromptTemplate(
         $input_variables,
         $template
