@@ -3,8 +3,7 @@
 [![run-tests](https://github.com/alnutile/larachain-prompt-templates/actions/workflows/run-tests.yml/badge.svg)](https://github.com/alnutile/larachain-prompt-templates/actions/workflows/run-tests.yml)
 
 The docs are here
-[I will build out some notes [here](https://alfrednutile.notion.site/Prompts-8926577153774a3bbe5eea22aaf2ca31)
-](https://github.com/alnutile/larachain/wiki/Prompt-Template)
+I will build out some notes [here](https://alfrednutile.notion.site/Prompts-8926577153774a3bbe5eea22aaf2ca31)
 
 You can also see in the tests folder a few great examples of Prompt types.
 
